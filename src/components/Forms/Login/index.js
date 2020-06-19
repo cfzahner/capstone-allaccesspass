@@ -1,3 +1,5 @@
+// TODO{manav.misra}: Consolidate this into 'LoginRegister'
+
 import React from "react";
 
 export default class Login extends React.Component {

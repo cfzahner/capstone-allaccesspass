@@ -1,4 +1,7 @@
+// TODO{manav.misra}: Ascertain how to combine the registration and login into 1 with conditional rendering
+
 import React from "react";
+
 export default class Signup extends React.Component {
   constructor(props) {
     super(props);

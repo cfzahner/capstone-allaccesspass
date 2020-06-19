@@ -1,34 +1,23 @@
+import PropTypes from "prop-types";
 import React from "react";
 
-import "font-awesome/css/font-awesome.min.css";
-
-import { getAllCandidates } from "api";
-
-export const Card = () => <section>Some Person</section>;
-
-
-export class index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      position: "",
-      location: "",
-      experience: "",
-    }
-
-
-    async componentDidMount() {
-      try {
-        this.setState(await getAllCandidates())
-      } catch (error) {
-        console.log(error)
-      }
-      }
-    }
-
+export class Card extends React.Component {
+  static propTypes = {
+    bio: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    yearsExperiences: PropTypes.number.isRequired,
+  };
 
   render() {
-    return ()
+    return (
+      <ul>
+        <li>this.props.name</li>
+        <li>this.props.location</li>
+        <li>this.props.position</li>
+        <li>this.props.yearsExperience</li>
+      </ul>
+    );
   }
 }

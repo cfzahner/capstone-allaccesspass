@@ -1,5 +1,6 @@
 import React from "react";
-// import { kebabcase(link.toLowerCase())} from "lodash.kebabcase"
+
+import "./Navigation.css";
 
 export const Navigation = () => (
   <nav>

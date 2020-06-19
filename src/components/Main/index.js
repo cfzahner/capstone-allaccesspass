@@ -1,47 +1,32 @@
 import React from "react";
-import { Card } from "card";
+import { Card } from "./Card";
 
 import { getAllCandidates } from "api";
 
-export class App extends React.Component {
+export class Main extends React.Component {
   state = {
     candidates: [],
   };
 
   renderCards = () =>
     this.state.candidates.map(
-      ({ name, location, position, experience, picture, bio }, index) => (
+      ({ name, location, position, yearsExperience, bio }, index) => (
         <Card
-          name={name}
-          location={location}
-          position={position}
-          experience={experience}
-          picture={picture}
           bio={bio}
+          location={location}
+          name={name}
+          position={position}
+          yearsExperience={yearsExperience}
           key={index}
         />
       )
     );
 
   async componentDidMount() {
-    const { results } = await getAllCandidates();
-    this.setState({ candidates: results });
-    console.log("hello", this.state);
+    this.setState({ candidates: await getAllCandidates() });
   }
 
   render() {
     return <main className="App">{this.renderCards()}</main>;
   }
 }
-
-// export class Main extends React {
-//  state = {
-//    candidates: [],
-//  };
-//
-//  async componentDidMount() {
-//    this.setState(
-//      { candidates: await  }
-//    )
-//  }
-//}
