@@ -7,7 +7,6 @@ export const getAllCandidates = async () => {
       .db("candidates")
       .collection("candidates")
       .find();
-    console.log("hello client", cursor);
     return await cursor.toArray();
   } catch (err) {
     throw new Error(err);
@@ -15,3 +14,5 @@ export const getAllCandidates = async () => {
     await client.close();
   }
 };
+
+export const

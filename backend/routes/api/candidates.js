@@ -3,7 +3,7 @@ import { getAllCandidates } from "db";
 
 const router = Router();
 
-router.get("/candidates", (_, res) => {
+router.get("/test", (_, res) => {
   res.send("<p>candidates router testing</p>");
 });
 
