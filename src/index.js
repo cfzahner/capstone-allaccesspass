@@ -1,28 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { App } from "./App";
 import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
 
-import Header from "./components/header";
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
 import { BrowserRouter as Router, Route } from "react-router-dom";
 class App extends React.Component {
   render() {
     return (
       <Router>
         <Header />
-        <Route exact path="/" component={login} />
-        <Route path="/signup" component={signup} />
-        <Route path="/home" component={home} />
+        <Route exact path="/" component={Login} />
+        <Route path="/signup" component={Signup} />
       </Router>
     );
   }
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <App />
+//  </React.StrictMode>,
+//  document.getElementById("root")
+//);
