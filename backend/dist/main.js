@@ -91,10 +91,9 @@
   !*** ./db/client.js ***!
   \**********************/
 /*! exports provided: client */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"client\", function() { return client; });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"./node_modules/mongodb/index.js\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var dotenv__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dotenv */ \"./node_modules/dotenv/lib/main.js\");\n/* harmony import */ var dotenv__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dotenv__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\ndotenv__WEBPACK_IMPORTED_MODULE_1___default.a.config();\n\nconst client = new mongodb__WEBPACK_IMPORTED_MODULE_0__[\"MongoClient\"](process.env.ATLAS_URI, {\n  useUnifiedTopology: true,\n});\n\n\n//# sourceURL=webpack:///./db/client.js?");
+eval("throw new Error(\"Module parse failed: Unexpected token (18:1)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n|     })\\n|   })\\n> })();\\n| \");\n\n//# sourceURL=webpack:///./db/client.js?");
 
 /***/ }),
 
