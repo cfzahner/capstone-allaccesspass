@@ -2,16 +2,11 @@ import { client } from "./client";
 
 export const getAllCandidates = async () => {
   try {
-    await client.connect();
-    const cursor = await client
-      .db("candidates")
-      .collection("candidates")
-      .find();
-    console.log("hello client", cursor);
-    return await cursor.toArray();
+    const cursor = await client.db("products").collection("data");
+    const results = await cursor.toArray();
+    await cursor.close();
+    return results;
   } catch (err) {
     throw new Error(err);
-  } finally {
-    await client.close();
   }
 };
