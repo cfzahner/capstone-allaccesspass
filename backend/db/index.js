@@ -10,8 +10,6 @@ export const getAllCandidates = async () => {
     return await cursor.toArray();
   } catch (err) {
     throw new Error(err);
-  } finally {
-    await client.close();
   }
 };
 
