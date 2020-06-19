@@ -1,6 +1,4 @@
 export const getAllCandidates = async () => {
-  const resp = await fetch(
-    "https://randomuser.me/api/?results=100&gender=female"
-  );
+  const resp = await fetch("http://localhost:1000/api/candidates/candidates");
   return resp.json();
 };
