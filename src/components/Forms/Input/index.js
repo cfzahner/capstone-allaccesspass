@@ -31,10 +31,10 @@ handleChange = (event) => {
           id={this.camelCaseLabel}
           type={this.props.type}
           placeholder={this.props.label}
-          // TODO: Implement handleChange
+          data-st={this.props.st || this.camelCaseLabel}
           onChange={this.handleChange}
         />
       </div>
     );
   }
-}
+
