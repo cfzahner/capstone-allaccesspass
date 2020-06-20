@@ -1,6 +1,6 @@
 import React from "react";
 
-import Input from "./Input";
+import { Input } from "./Input";
 
 export class Form extends React.Component {
   handleChange = (event) => {
