@@ -1,6 +1,8 @@
 import React from "react";
 
-export class SignUp extends React.Component {
+import { Form } from "../Form";
+
+export class SignUp extends Form {
   state = {
     name: "",
     email: "",
