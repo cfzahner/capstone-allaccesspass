@@ -1,7 +1,8 @@
-// TODO{manav.misra}: Consolidate this into 'LoginRegister'
+import React, { Component } from "react";
+import "./App.css";
 
-import React from "react";
-
+class Login extends Component {
+  constructor() {
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
