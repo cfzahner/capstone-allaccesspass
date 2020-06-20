@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "./Card";
+import { SignUp } from "../Forms";
 
 import { getAllCandidates } from "api";
 
@@ -27,6 +28,11 @@ export class Main extends React.Component {
   }
 
   render() {
-    return <main className="App">{this.renderCards()}</main>;
+    return (
+      <main className="App">
+        <SignUp />
+        {this.renderCards()}
+      </main>
+    );
   }
 }
