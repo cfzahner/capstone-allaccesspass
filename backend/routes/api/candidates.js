@@ -11,12 +11,11 @@ router.get("/candidates", async (_, res) => {
   res.json(await getAllCandidates());
 });
 
-export default router;
-
 router.post("/register", (req, res) => {
   res.send(`<p></p>`);
 });
 router.post("/authentication");
+export default router;
 
 //router post to register user
 //router.post that you got the response
