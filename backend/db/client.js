@@ -11,6 +11,7 @@ async () => {
   await client.connect();
   process.on("SIGINT", async() => {
     client.close().then(() => {
+      // shuts down (closes) port
       console.info("SIGINT signal received. Closing MongoClient")
       process.exit(0)
     })
