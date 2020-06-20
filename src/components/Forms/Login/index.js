@@ -2,17 +2,17 @@ import React from "react";
 import { Form } from "../Form";
 import { Button } from "components/Button";
 import styles from "./login.css";
-  constructor() {
-export default class Login extends React.Component {
+export class Login extends Form {
+  state = {
   constructor(props) {
     super(props);
     this.state = {
-      loggedIn: false,
-      name: "",
-      username: "",
-      password: "",
-      err: false,
-    };
+    loggedIn: false,
+    name: "",
+    username: "",
+    password: "",
+    err: false,
+  };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
