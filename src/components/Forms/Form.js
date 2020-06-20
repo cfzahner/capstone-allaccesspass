@@ -12,6 +12,22 @@ export class Form extends React.Component {
     ));
 
   render() {
-    return <Form></Form>;
+    return (
+      <Form>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+        <input type="submit" value="Submit" />
+      </Form>
+    );
   }
 }
