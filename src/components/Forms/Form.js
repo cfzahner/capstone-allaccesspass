@@ -3,7 +3,10 @@ import React from "react";
 import Input from "./Input";
 
 export class Form extends React.Component {
-  // TODO{manav.misra}: Use 'Context' or just 'proxy trickery' to 'handleChange'
+  handleChange = (event) => {
+    //dot notation(interpolation)
+    this.setState({ [event.target.value]: "value" });
+  };
 
   renderInputs = (inputs) =>
     // Each type of form will have an Array of Objects with the desired input props
