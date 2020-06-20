@@ -13,28 +13,25 @@ export class Input extends React.Component {
 
   static propTypes = {
     label: PropTypes.string.isRequired,
+    onChange: PropTypes.func, // handleChange method
+    st: PropTypes.string, // "username"
     type: PropTypes.string,
-    value: PropTypes.string,
   };
-handleChange = (event) => {
 
-}
-}
   // All attributes to be camelCased
   camelCaseLabel = camelCase(this.props.label);
 
   render() {
     return (
       <div>
-        <label htmlFor={this.camelCaseLabel}>{this.props.label}</label>
         <input
           id={this.camelCaseLabel}
           type={this.props.type}
           placeholder={this.props.label}
           data-st={this.props.st || this.camelCaseLabel}
-          onChange={this.handleChange}
+          onChange={this.props.onChange}
         />
       </div>
     );
   }
-
+}
