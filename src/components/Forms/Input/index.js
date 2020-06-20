@@ -16,7 +16,10 @@ export class Input extends React.Component {
     type: PropTypes.string,
     value: PropTypes.string,
   };
+handleChange = (event) => {
 
+}
+}
   // All attributes to be camelCased
   camelCaseLabel = camelCase(this.props.label);
 
