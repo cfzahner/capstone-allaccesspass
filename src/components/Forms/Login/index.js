@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./App.css";
-
-class Login extends Component {
+import React from "react";
+import { Form } from "../Form";
+import { Button } from "components/Button";
+import styles from "./login.css";
   constructor() {
 export default class Login extends React.Component {
   constructor(props) {
