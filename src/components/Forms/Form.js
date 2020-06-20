@@ -11,26 +11,11 @@ export class Form extends React.Component {
   renderInputs = (inputs) =>
     // Each type of form will have an Array of Objects with the desired input props
     inputs.map(({ labelText, inputType }) => (
-      <Input label={labelText} type={inputType} key={labelText} />
+      <Input
+        label={labelText}
+        type={inputType}
+        key={labelText}
+        onChange={this.handleChange}
+      />
     ));
-
-  render() {
-    return (
-      <Form>
-        <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Name:
-          <input type="text" name="name" />
-        </label>
-        <input type="submit" value="Submit" />
-      </Form>
-    );
-  }
 }
