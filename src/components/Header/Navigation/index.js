@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Navigation.css";
+import "./navigation.css";
 
 export const Navigation = () => (
   <nav>
