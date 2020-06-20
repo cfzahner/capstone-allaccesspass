@@ -1,20 +1,13 @@
-// TODO{manav.misra}: Ascertain how to combine the registration and login into 1 with conditional rendering
-
 import React from "react";
 
-export default class Signup extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "",
-      email: "",
-      username: "",
-      password: "",
-    };
+export class SignUp extends React.Component {
+  state = {
+    name: "",
+    email: "",
+    username: "",
+    password: "",
+  };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
   handleChange(e) {
     this.setState({ [e.target.title]: e.target.value });
   }
