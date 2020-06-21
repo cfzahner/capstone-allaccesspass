@@ -4,21 +4,38 @@ import { Button } from "components/Button";
 import styles from "./login.css";
 export class Login extends Form {
   state = {
-    loggedIn: false,
-    name: "",
-    username: "",
+    buttonTexts: ["Login", "Register"],
+    inputs: [
+      {
+        inputType: "text",
+        labelText: "Username",
+      },
+      {
+        inputType: "password",
+        labelText: "Password",
+      },
+    ],
+    isLoggedIn: false,
     password: "",
-    err: false,
+    username: "",
   };
 
-  inputs = [
+  registrationInputs = [
     {
       inputType: "text",
-      labelText: "Username",
+      labelText: "Name",
+    },
+    {
+      inputType: "email",
+      labelText: "Email",
+    },
+    {
+      inputType: "text",
+      labelText: "User Nam",
     },
     {
       inputType: "password",
-      labelText: "Password",
+      labelText: "password",
     },
   ];
 
