@@ -39,9 +39,16 @@ export class Login extends Form {
     },
   ];
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.processFormData(e.target, "st"));
+  handleRegistration = () => {
+    const currentInputs = this.state.inputs;
+
+    this.setState({
+      buttonTexts: [...this.state.buttonTexts].reverse(),
+      inputs:
+        currentInputs.length > 2
+          ? currentInputs.slice(0, 2)
+          : currentInputs.concat(this.registrationInputs),
+    });
   };
 
   render() {
