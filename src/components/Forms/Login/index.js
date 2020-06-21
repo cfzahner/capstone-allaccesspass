@@ -53,10 +53,16 @@ export class Login extends Form {
 
   render() {
     return (
-      <form className={styles.form}>
-        {this.renderInputs(this.inputs)}
-        <Button />
-        <Button buttonClass="plain" label="Register?" type="button" />
+      <form className={styles.form} onSubmit={this.handleSubmit}>
+        {this.renderInputs(this.state.inputs)}
+        <Button buttonText={this.state.buttonTexts[0]} />
+        <Button
+          buttonClass="plain"
+          buttonText={this.state.buttonTexts[1]}
+          label="Register?"
+          type="button"
+          onClick={this.handleRegistration}
+        />
       </form>
     );
   }
