@@ -21,7 +21,7 @@ export class SignUp extends Form {
     },
     {
       inputType: "text",
-      labelText: "User Name khjkhjk",
+      labelText: "User Nam",
     },
     {
       inputType: "password",
