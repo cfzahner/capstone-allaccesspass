@@ -7,7 +7,7 @@ router.get("/test", (_, res) => {
   res.send("<p>candidates router testing</p>");
 });
 // gets username and password
-router.get("/candidates", async (req, res) => {
+router.get("/candidates/user/login", async (req, res) => {
   res.json(await getAllCandidates());
   console.log(req.body);
 });
