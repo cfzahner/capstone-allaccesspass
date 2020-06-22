@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "font-awesome/css/font-awesome.min.css";
+
 export class Card extends React.Component {
   static propTypes = {
     bio: PropTypes.string.isRequired,
