@@ -8,13 +8,9 @@ const PORT = 1000;
 
 app.get("/", (_, res) => res.send("<p>Howdy</p>"));
 
-app.use("/api/candidates", candidates);
+app.use(cors());
 
-app.use(
-  cors({
-    origin: true,
-  })
-);
+app.use("/api/candidates", candidates);
 
 app.post("/api/candidates", function (req, res) {
   console.log(req);
