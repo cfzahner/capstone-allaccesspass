@@ -18,7 +18,3 @@ app.use(
 app.listen(PORT, () => {
   console.log(`run a server on port: ${PORT}`);
 });
-
-(async () => {
-  console.log("hello");
-})();

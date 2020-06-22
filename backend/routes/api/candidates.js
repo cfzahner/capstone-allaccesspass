@@ -1,14 +1,15 @@
 import { Router } from "express";
-import { getAllCandidates } from "db";
+import { getAllCandidates } from "../../db/index";
 
 const router = Router();
 
 router.get("/test", (_, res) => {
   res.send("<p>candidates router testing</p>");
 });
-
-router.get("/candidates", async (_, res) => {
+// gets username and password
+router.get("/candidates", async (req, res) => {
   res.json(await getAllCandidates());
+  console.log(req.body);
 });
 
 router.post("/register", (req, res) => {
