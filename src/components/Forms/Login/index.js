@@ -34,25 +34,40 @@ export class Login extends Form {
       inputType: "email",
       labelText: "Email",
     },
-    {
-      inputType: "text",
-      labelText: "User Name",
-    },
-    {
-      inputType: "password",
-      labelText: "password",
-    },
   ];
 
-  handleRegistration = () => {
+  checkIsRegistration() {
+    return this.state.inputs.length > 2;
+  }
+
+  handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const baseURL = "http://localhost:1000/api/candidates/candidates";
+
+    const endpoint = this.checkIsRegistration()
+      ? "/user/register"
+      : "/user/login";
+
+    const { status } = await getAllCandidates(baseURL + endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(this.processFormData(e.target)),
+    });
+    console.log(status);
+  };
+  handleButtonToggle = () => {
     const currentInputs = this.state.inputs;
 
+    // 'length' determines whether registrationInputs included or not
     this.setState({
       buttonTexts: [...this.state.buttonTexts].reverse(),
-      inputs:
-        currentInputs.length > 2
-          ? currentInputs.slice(0, 2)
-          : this.registrationInputs,
+      inputs: this.checkIsRegistration()
+        ? currentInputs.slice(0, 2)
+        : currentInputs.concat(this.registrationInputs),
     });
   };
 
