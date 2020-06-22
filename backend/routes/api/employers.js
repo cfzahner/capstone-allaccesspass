@@ -1,15 +1,13 @@
-"api/employers/register";
+import { Router } from "express";
 
-// router.post("/authenticate")
-// find $and username === req.body.username (and with password)
+import { registerUser } from "../../db";
 
-router.post("/register", async (req, res) => {
-  // TODO:
-  try {
-    addEmployer(req.body).then(() => {
-      res.send("<p>Added Employee</p>");
-    });
-  } catch (error) {}
-});
+const router = Router();
+
+// TODO: Wrap try-catch
+router.post("/register", async ({ body }, res) =>
+  res.json(await registerUser(body))
+);
 
 // TODO: router.put("/saveCandidateId", Use the req.body.candidateId) - update
+export default router;
