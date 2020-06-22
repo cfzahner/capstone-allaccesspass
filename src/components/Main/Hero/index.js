@@ -1,7 +1,6 @@
 import React from "react";
 import { styles } from "./Hero.css";
 import "bulma/css/bulma.css";
-import { Header } from "components/Header";
 export class Hero extends React.Component {
   // add event handler for button
 
@@ -10,7 +9,7 @@ export class Hero extends React.Component {
       //hero image example
       <div className="hero-image">
         <section>
-          <h2>Lets talk...</h2>
+          <h2>Lets Talk...</h2>
 
           <p>
             It’s a misrepresentation of our own identity, as we have a society
