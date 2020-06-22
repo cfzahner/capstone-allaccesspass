@@ -25,7 +25,6 @@ export class Input extends React.Component {
     return (
       <div>
         <input
-          className="form-inputs"
           id={this.camelCaseLabel}
           type={this.props.type}
           placeholder={this.props.label}
