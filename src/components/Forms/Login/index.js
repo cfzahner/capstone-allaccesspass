@@ -1,7 +1,12 @@
 import React from "react";
-import { Form } from "../Form";
+
 import { Button } from "components/Button";
+import { Form } from "../Form";
+
+import { getAllCandidates } from "api";
+
 import styles from "./Login.module.css";
+
 export class Login extends Form {
   state = {
     buttonTexts: ["Login", "Register"],
