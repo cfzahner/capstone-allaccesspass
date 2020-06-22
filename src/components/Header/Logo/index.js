@@ -1,3 +1,3 @@
 import React from "react";
-
-export const Logo = () => <h1>Logo Please!</h1>;
+import "./logo.css";
+export const Logo = () => <h1>All Access Pass</h1>;
