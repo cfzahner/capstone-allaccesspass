@@ -14,3 +14,7 @@ a {
   padding: 8px;
   color: white;
 }
+
+.isActiveLink {
+  text-transform: uppercase;
+}
