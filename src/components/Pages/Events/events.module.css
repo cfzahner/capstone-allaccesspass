@@ -1,0 +1,16 @@
+.events {
+  color: white;
+  background-color: black;
+}
+
+.event-title {
+  background-image: url("https://images.unsplash.com/photo-1558970439-add78fc68990?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=879&q=80");
+  position: relative;
+  height: 30vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box {
+  background-color: black;
+}
