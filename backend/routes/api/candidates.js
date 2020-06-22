@@ -6,10 +6,9 @@ const router = Router();
 router.get("/test", (_, res) => {
   res.send("<p>candidates router testing</p>");
 });
-// gets username and password
-router.get("/candidates/user/login", async (req, res) => {
+
+router.get("/candidates", async (_, res) => {
   res.json(await getAllCandidates());
-  console.log(req.body);
 });
 
 router.post("/register", (req, res) => {
