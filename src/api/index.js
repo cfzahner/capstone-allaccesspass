@@ -1,7 +1,11 @@
-export const getAllCandidates = async () => {
-  const resp = await fetch("http://localhost:1000/api/candidates/candidates");
-  return resp.json();
-};
+//export const makeRequest = async () => {
+//  const resp = await fetch("http://localhost:1000/api/candidates/candidates");
+//  return resp.json();
+//};
+
+export const getAllCandidates = async (endpoint, req) =>
+  await fetch(endpoint, req);
+
 export const authenticateUser = async (formData) => {
   const resp = await fetch("http://localhost:1000/api/candidates/candidates", {
     //   method: "POST",
