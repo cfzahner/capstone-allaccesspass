@@ -1,0 +1,9 @@
+.form-inputs {
+  opacity: 0.4;
+  margin-left: 35%;
+  margin-top: 5%;
+  border-radius: 3em;
+  max-width: 30%;
+  display: block;
+  border: none;
+}
