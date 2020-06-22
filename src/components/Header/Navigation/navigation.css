@@ -3,11 +3,14 @@ nav ul {
   display: flex;
   list-style-type: none;
   justify-content: space-between;
-  background-color: transparent;
+  background-color: black;
+  margin-bottom: 0vh;
+  margin-top: 0vh;
 }
 
 a {
   text-decoration: none;
   display: block;
   padding: 8px;
+  color: white;
 }
