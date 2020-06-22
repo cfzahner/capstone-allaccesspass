@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "../Form";
 import { Button } from "components/Button";
-import styles from "./login.css";
+import "./login.css";
 export class Login extends Form {
   state = {
     buttonTexts: ["Login", "Register"],
@@ -31,7 +31,7 @@ export class Login extends Form {
     },
     {
       inputType: "text",
-      labelText: "User Nam",
+      labelText: "User Name",
     },
     {
       inputType: "password",
@@ -47,13 +47,13 @@ export class Login extends Form {
       inputs:
         currentInputs.length > 2
           ? currentInputs.slice(0, 2)
-          : currentInputs.concat(this.registrationInputs),
+          : this.registrationInputs,
     });
   };
 
   render() {
     return (
-      <form className={styles.form} onSubmit={this.handleSubmit}>
+      <form className="form-style" onSubmit={this.handleSubmit}>
         {this.renderInputs(this.state.inputs)}
         <Button buttonText={this.state.buttonTexts[0]} />
         <Button
