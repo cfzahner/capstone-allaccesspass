@@ -1,4 +1,4 @@
 export { Header } from "./Header";
 export { Main } from "./Main";
 export { Login } from "./Forms/Login";
-export { Home, AboutUs } from "./Pages";
+export { Home, About, Events, Reviews } from "./pages";
