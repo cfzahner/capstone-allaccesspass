@@ -9,6 +9,7 @@ const PORT = 1000;
 app.get("/", (_, res) => res.send("<p>Howdy</p>"));
 
 app.use(cors());
+app.use(express.json());
 
 app.use("/api/candidates", candidates);
 
