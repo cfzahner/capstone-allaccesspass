@@ -7,14 +7,15 @@ export const client = new MongoClient(process.env.ATLAS_URI, {
   useUnifiedTopology: true,
 });
 
-// eslint-disable-next-line no-unused-expressions
-async () => {
+(async () => {
   await client.connect();
-  process.on("SIGINT", async () => {
+
+  // 'CTRL + C' - "SIGINT"
+  process.on("SIGINT", () => {
     client.close().then(() => {
-      // shuts down (closes) port
-      console.info("SIGINT signal received. Closing MongoClient");
+      console.info("SIGINT signal received. Closing MongoClient.");
+      // Intentionally shut down node server so we don't 'plug up ports'
       process.exit(0);
     });
   });
-};
+})();
