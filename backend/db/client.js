@@ -1,9 +1,8 @@
+import dotenv from "dotenv";
 import { MongoClient } from "mongodb";
-//import dotenv from "dotenv";
 
-//dotenv.config();
-require("dotenv").config();
-console.log(process.env.ATLAS_URI);
+dotenv.config();
+
 export const client = new MongoClient(process.env.ATLAS_URI, {
   useUnifiedTopology: true,
 });
