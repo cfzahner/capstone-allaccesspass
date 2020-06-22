@@ -1,22 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./navigation.css";
 
-export const Navigation = () => (
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/About Us">About Us</a>
-      </li>
-      <li>
-        <a href="/Events">Events</a>
-      </li>
-      <li>
-        <a href="/Reviews">Reviews</a>
-      </li>
-    </ul>
-  </nav>
-);
+export class Navigation extends React.Component {
+  render() {
+    return (
+      <nav className="Nav">
+        <ul>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+
+          <Link to="/about">
+            <li>About Us</li>
+          </Link>
+
+          <Link to="/events">
+            <li>Events</li>
+          </Link>
+
+          <Link to="/reviews">
+            <li>Reviews</li>
+          </Link>
+        </ul>
+      </nav>
+    );
+  }
+}
