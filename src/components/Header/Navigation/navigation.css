@@ -1,19 +1,9 @@
-nav {
-  background-color: hotpink;
+nav ul {
   text-align: center;
   display: flex;
   list-style-type: none;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  align-items: center;
-  float: left;
+  justify-content: space-between;
+  background-color: transparent;
 }
 
 a {
