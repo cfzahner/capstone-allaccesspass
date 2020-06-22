@@ -20,15 +20,15 @@ export class Form extends React.Component {
   };
 
   processFormData = (formControls, datasetKey) =>
-    // Convert to ARRAY and 'filter' only inputs with 'ids' (not 'button', etc.)
+    // Convert to ARRAY and 'filter' only inputs with 'ids'
     Array.from(formControls)
       .filter(({ dataset }) => dataset[datasetKey])
       // 'map' and transform each 'input' into an OBJECT
-      .map(({ dataset, value }) => ({ [dataset[datasetKey]]: value }))
-      .reduce((accumulatedData, currentData) => ({
-        ...accumulatedData,
-        ...currentData,
-      }));
+      .map(({ dataset, value }) => ({ [dataset[datasetKey]]: value }));
+  // .reduce((accumulatedData, currentData) => ({
+  //   ...accumulatedData,
+  //   ...currentData,
+  // }));
 
   renderInputs = (inputs) =>
     // Each type of form will have an Array of Objects with the desired input props
