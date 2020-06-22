@@ -1,5 +1,6 @@
-//import cors from "cors";
+import cors from "cors";
 import express from "express";
+
 import candidates from "./routes/api/candidates";
 
 const app = express();
@@ -9,9 +10,13 @@ app.get("/", (_, res) => res.send("<p>Howdy</p>"));
 
 app.use("/api/candidates", candidates);
 
-//app.use(cors());
+app.use(
+  cors({
+    origin: true,
+  })
+);
 
-app.post("/candidates", function (req, res) {
+app.post("/api/candidates", function (req, res) {
   console.log(req);
 });
 
