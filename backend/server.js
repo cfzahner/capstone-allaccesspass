@@ -9,11 +9,11 @@ app.get("/", (_, res) => res.send("<p>Howdy</p>"));
 
 app.use("/api/candidates", candidates);
 
-app.use(
-  cors({
-    origin: true,
-  })
-);
+//app.use(cors());
+
+app.post("/candidates", function (req, res) {
+  console.log(req);
+});
 
 app.listen(PORT, () => {
   console.log(`run a server on port: ${PORT}`);
