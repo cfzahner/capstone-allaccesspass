@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "../Form";
 import { Button } from "components/Button";
-import "./login.css";
+import styles from "./Login.module.css";
 export class Login extends Form {
   state = {
     buttonTexts: ["Login", "Register"],
@@ -53,7 +53,7 @@ export class Login extends Form {
 
   render() {
     return (
-      <form className="form-style" onSubmit={this.handleSubmit}>
+      <form className={styles.form} onSubmit={this.handleSubmit}>
         {this.renderInputs(this.state.inputs)}
         <Button buttonText={this.state.buttonTexts[0]} />
         <Button
