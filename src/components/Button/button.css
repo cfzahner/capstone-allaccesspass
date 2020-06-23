@@ -3,11 +3,15 @@ button:not(.plain) {
   color: #fff;
   padding: 0.375rem 0.75rem;
   transition: background-color 0.15s ease-in-out;
+  height: 10vh;
+  width: 40vh;
+  border: none;
 }
 
 .plain {
   background-color: transparent;
-  color: #333;
+  height: 10vh;
+  width: 40vh;
 }
 
 .primary {
@@ -19,9 +23,14 @@ button:not(.plain) {
 }
 
 .success {
-  background-color: orange;
+  background-color:  #3700b3;
 }
 
 .success:hover {
-  background-color: #007e33;
+  background-color: hotpink;
+}
+
+.cardButton {
+  background-color: orange;
+  display: inline;
 }
