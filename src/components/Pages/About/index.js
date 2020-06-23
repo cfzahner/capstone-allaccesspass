@@ -7,9 +7,9 @@ export class About extends React.Component {
       <div className={styles.mainAbout}>
         <main>
           <h1 className={styles.title}>About Us!</h1>
-          <section className={styles.body}>
+          <section>
             <h2 className={styles.companies}>Who we work with?</h2>
-            <p className={styles.p.body}>
+            <p className={styles.pody}>
               Here's a list of companies and organizations that we partner with
               for job placement and furthuring education.
             </p>
