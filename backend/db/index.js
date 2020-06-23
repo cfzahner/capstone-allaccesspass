@@ -35,3 +35,25 @@ export const registerEmployer = async (newEmployer) => {
     throw new Error(err);
   }
 };
+
+export const addFave = async (usernameQuery, fave) => {
+  try {
+    return await client
+      .db("candidates")
+      .collection("candidates")
+      .findOneAndUpdate(usernameQuery, { $push: { faves: fave } });
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
+export const removeFave = async (usernameQuery, fave) => {
+  try {
+    return await client
+      .db("candidates")
+      .collection("candidates")
+      .findOneAndUpdate(usernameQuery, { $pull: { faves: fave } });
+  } catch (err) {
+    throw new Error(err);
+  }
+};
