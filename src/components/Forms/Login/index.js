@@ -45,13 +45,19 @@ export class Login extends Form {
 
     const endpoint = this.checkIsRegistration() ? "/register" : "/login";
 
-    //  TODO: ♻️ Refactor this with 'axios'
+    const newUserData = this.checkIsRegistration()
+      ? JSON.stringify({
+          ...this.processFormData(e.target),
+          ...{ faves: [] },
+        })
+      : JSON.stringify(this.processFormData(e.target));
+
     const res = await fetch(`http://localhost:1000/api/employers${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.processFormData(e.target)),
+      body: newUserData,
     });
   };
 
