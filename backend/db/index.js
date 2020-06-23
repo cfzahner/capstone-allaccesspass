@@ -2,7 +2,6 @@ import { client } from "./client";
 
 export const getAllCandidates = async () => {
   try {
-    // TODO{courtney.zahner}: https://www.w3schools.com/nodejs/nodejs_mongodb_find.asp
     const cursor = await client
       .db("candidates")
       .collection("candidates")
