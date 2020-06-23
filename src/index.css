@@ -1,5 +1,4 @@
 .Header {
-  background-color: orangered;
   margin-top: 5em;
   padding: 20px;
   font-family: 'Sriracha', cursive;
@@ -11,7 +10,6 @@
   border: thin solid black;
   margin-top: 5vh;
   text-align: center;
-  background-color: lightskyblue;
 }
 
 input {
@@ -23,33 +21,17 @@ input {
 }
 
 input::placeholder {
-  color: black;
+  color:;
 }
 
 button {
-  width: 60vw;
+  width: 30vw;
   height: 10vw;
-}
-
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  opacity: 0.6
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  width: 100%;
 }
