@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "components/Button";
 import { Form } from "../Form";
 
-import { getAllCandidates } from "api";
+import axios from "axios";
 
 import styles from "./Login.module.css";
 
@@ -43,22 +43,18 @@ export class Login extends Form {
   handleSubmit = async (e) => {
     e.preventDefault();
 
-    const baseURL = "http://localhost:1000/api/candidates/candidates";
+    const endpoint = this.checkIsRegistration() ? "/register" : "/login";
 
-    const endpoint = this.checkIsRegistration()
-      ? "/user/register"
-      : "/user/login";
-
-    const { status } = await getAllCandidates(baseURL + endpoint, {
+    //  TODO: ♻️ Refactor this with 'axios'
+    const res = await fetch(`http://localhost:1000/api/employers${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify(this.processFormData(e.target)),
     });
-    console.log(status);
   };
+
   handleButtonToggle = () => {
     const currentInputs = this.state.inputs;
 
