@@ -1,19 +1,36 @@
 import React from "react";
-import { Header } from "components/Header";
-import styles from "./home.module.css";
+
+import axios from "axios";
+
+import styles from "./Home.module.css";
 
 export class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isToggleOn: true };
+  // NO NEED TO USE 'constructor' 📢 - state fields
+  state = {
+    candidates: [],
+    // Should start as 'false'
+    isToggleOn: false,
+  };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
+  // Bind 'this' lexically to Class with arrow syntax
+  handleClick = () => {
     this.setState((state) => ({
       isToggleOn: !state.isToggleOn,
     }));
+  };
+
+  async componentDidMount() {
+    try {
+      const candidates = await axios({
+        method: "GET",
+        url: "http://localhost:1000/api/candidates/candidates",
+      });
+
+      // 'axios' processes JSON in the response and adds it to 'data
+      this.setState({ candidates: candidates.data });
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   render() {
