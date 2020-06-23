@@ -1,45 +1,68 @@
 .hero {
-  height: 100vh;
+  height: 150vh;
   background-image: url("https://images.unsplash.com/photo-1529362487499-b149087a4f62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1341&q=80");
   position: relative;
   overflow: hidden;
   background-size: cover;
-  max-width: 100%;
+  width: 100%;
 }
 
-.home-button {
-  height: 10vh;
-  width: 20vh;
-  opacity: 0.4;
-  border: none;
-  background-color: brown;
-  margin: 25px 50px 75px;
-  margin-top: 5vh;
-  margin-left: 300px;
-  max-width: 100%;
-}
 
 .h2 {
   text-align: left;
+  margin-top: 2vh;
   position: absolute;
   font-family: sans-serif;
+  background-color: navy;
+  opacity: 0.7;
+  padding: 3%;
   color: white;
-  top: 30%;
-  left: 50%;
+  top: 15%;
+  left: 60%;
   max-width: 100%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  z-index: 1;
  }
 
-
 .p {
-  text-align: center;
+  text-align: justify;
   position: absolute;
   margin: 0;
+  margin-left: 50vh;
   font-family: sans-serif;
+  font-size: larger;
+  background-color:black;
+  opacity: 0.6;
   color: white;
-  top: 50%;
+  padding: 5%;
+  top: 40%;
   left: 50%;
   max-width: 100%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+}
+
+.cards {
+  height: 200vh;
+  width: 60vh;
+  overflow: scroll;
+  margin-left: 25vh;
+  margin-top: 5vh;
+  background-color: navy;
+  padding: 3em;
+  }
+
+.homeButtons {
+  left: 130vh;
+  top: 65%;
+  width: 75%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.ladiesButtons {
+  background-color: navy;
 }
