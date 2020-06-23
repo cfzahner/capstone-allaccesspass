@@ -4,9 +4,10 @@ import styles from "./reviews.modules.css";
 export class Reviews extends React.Component {
   render() {
     return (
-      <div className={styles.h2}>
-        <main>
-          <section className="hero-home">
+      <main>
+        <div className={styles.heroReview}>
+          <section>
+            <h1 className={styles.reviewTitle}>Reviews</h1>
             <h2>Lets talk about reviews!</h2>
 
             <p>
@@ -14,8 +15,8 @@ export class Reviews extends React.Component {
               had working with a production company.
             </p>
           </section>
-        </main>
-      </div>
+        </div>
+      </main>
     );
   }
 }

@@ -4,9 +4,9 @@ import styles from "./events.module.css";
 export class Events extends React.Component {
   render() {
     return (
-      <div className={styles.back}>
+      <div className={styles.topHero}>
         <main>
-          <section className={styles.heroHome}>
+          <section>
             <h1 className={styles.eventTitle}>Events</h1>
 
             <h2 className={styles.h2Message}>
