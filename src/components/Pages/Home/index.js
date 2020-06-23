@@ -2,7 +2,10 @@ import React from "react";
 
 import axios from "axios";
 
-import styles from "./Home.module.css";
+import styles from "./home.module.css";
+
+import { Cards } from "../../Cards/index";
+//import Card from "@material-ui/core";
 
 export class Home extends React.Component {
   // NO NEED TO USE 'constructor' 📢 - state fields
@@ -33,30 +36,52 @@ export class Home extends React.Component {
     }
   }
 
+  renderCards = () =>
+    this.state.candidates.map(
+      ({ name, location, position, yearsExperience }, index) => (
+        <Cards
+          name={name}
+          location={location}
+          position={position}
+          yearsExperience={yearsExperience}
+          key={index}
+        />
+      )
+    );
+
   render() {
     return (
       <div>
-        <a className="header-button-a" href="/profile">
-          Create a Profile
-        </a>
-
-        <div>
-          <main>
-            <section className={styles.hero}>
-              <h2 className={styles.h2}>Lets Talk...</h2>
-
-              <p className={styles.p}>
-                It’s a misrepresentation of our own identity, as we have a
-                society where 50% of the population are women,” says Vanessa
-                Reed, CEO of the PRS for Music Foundation, a leading music
-                charity. “If you’re underrepresented in an industry, you’re
-                going to feel like you have less reason to put yourself forward
-                or less chance of getting support. You need to see it if you’re
-                going to be it,” she says.
-              </p>
+        <main>
+          <section className={styles.hero}>
+            <section>
+              <div className={styles.homeButtons}>
+                <button className={styles.ladiesButtons}>
+                  Add Your Profile
+                </button>
+                <button className={styles.ladiesButtons}>
+                  Meet the Ladies
+                </button>
+                <button className={styles.ladiesButtons}>
+                  Browse the Companies
+                </button>
+              </div>
             </section>
-          </main>
-        </div>
+            <div>
+              <main className={styles.cards}>{this.renderCards()}</main>
+            </div>
+            <h2 className={styles.h2}>Lets Talk...</h2>
+
+            <p className={styles.p}>
+              It’s a misrepresentation of our own identity, as we have a society
+              where 50% of the population are women,” says Vanessa Reed, CEO of
+              the PRS for Music Foundation, a leading music charity. “If you’re
+              underrepresented in an industry, you’re going to feel like you
+              have less reason to put yourself forward or less chance of getting
+              support. You need to see it if you’re going to be it,” she says.
+            </p>
+          </section>
+        </main>
       </div>
     );
   }
