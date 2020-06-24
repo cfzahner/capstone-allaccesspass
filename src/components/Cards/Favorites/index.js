@@ -22,20 +22,20 @@ export class Favorites extends React.Component {
     const starSpan = !this.state.isFave ? (
       <Button
         buttonClass="cardButton"
-        buttonText="star"
+        buttonText="Save"
         onClick={this.handleFaved}
       />
     ) : (
       <Button
         buttonClass="cardButton"
-        buttonText="star"
+        buttonText="Saved"
         onClick={this.handleFaved}
       />
     );
 
     return (
       <div className={styles.favorites}>
-        <Button buttonClass="cardButton" buttonText="heart" type="button" />
+        <Button buttonClass="cardButton" buttonText="Match" type="button" />
         {starSpan}
       </div>
     );
