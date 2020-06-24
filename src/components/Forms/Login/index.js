@@ -82,7 +82,7 @@ export class Login extends Form {
         <Button
           buttonClass="plain"
           buttonText={this.state.buttonTexts[1]}
-          type="submit"
+          type="button"
           onClick={this.handleButtonToggle}
         />
       </form>
