@@ -9,15 +9,20 @@ export class CompanyForm extends React.Component {
     departments: "",
     positions: "",
     mission: "",
+    value: "",
   };
 
   handleChange = (event) => {
     this.setState({ value: event.target.value });
   };
 
-  handleSubmit = (event) => {
-    alert("A user was submitted: " + this.state.value);
+  // handleSubmit = (event) => {
+  //   alert("A user was submitted: " + this.state.value);
+  //   event.preventDefault();
+  // };
+  handleFormSubmit = (event) => {
     event.preventDefault();
+    window.location.href = "/thankyou";
   };
 
   render() {
@@ -76,7 +81,7 @@ export class CompanyForm extends React.Component {
               placeholder="Mission statement"
             />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" onClick={this.handleFormSubmit} />
         </form>
       </main>
     );
