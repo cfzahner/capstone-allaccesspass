@@ -13,7 +13,7 @@ router.post("/register", async ({ body }, res) =>
   res.json(await registerEmployer(body))
 );
 
-router.post("/user/login", async ({ body }, res) => {
+router.post("/login", async ({ body }, res) => {
   const results = await loginUser(body);
   if (!results) {
     res.status(403);

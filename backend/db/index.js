@@ -17,8 +17,8 @@ export const getAllCandidates = async () => {
 export const registerEmployer = async (newEmployer) => {
   try {
     return await client
-      .db("candidates")
-      .collection("candidates")
+      .db("all_access_pass")
+      .collection("employers")
       .insertOne(newEmployer);
   } catch (err) {
     throw new Error(err);

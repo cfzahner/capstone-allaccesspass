@@ -52,6 +52,7 @@ export class Login extends Form {
       : JSON.stringify(this.processFormData(e.target));
 
     const res = await fetch(`http://localhost:1000/api/auth${endpoint}`, {
+    const res = await fetch(`http://localhost:1000/api/employers${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
