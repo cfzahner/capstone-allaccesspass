@@ -8,20 +8,30 @@
 }
 
 .eventTitle {
-  background-color: transparent;
-  text-align: center;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding:1em 3em 1em 3em;
   font-size: 2em;
-  margin-top: 0vh;
+  margin-top: 0;
+  position: absolute;
+  top: 35%;
+  bottom: 40%;
+  right: 40%;
+  opacity: 0.5;
+  border-radius: 5em;
 }
 
 .h2Message {
   margin: 0;
-  background-color:orange;
+  background-color:purple;
   padding: 1vh;
   margin-top: 25vh;
   text-align: center;
   color: white;
   font-size: 2em;
+  border-radius: 3em;
 }
 
 .events {
