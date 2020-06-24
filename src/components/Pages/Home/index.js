@@ -5,7 +5,6 @@ import axios from "axios";
 import styles from "./home.module.css";
 
 import { Cards } from "../../Cards/index";
-//import Card from "@material-ui/core";
 
 export class Home extends React.Component {
   // NO NEED TO USE 'constructor' 📢 - state fields
