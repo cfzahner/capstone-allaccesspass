@@ -1,3 +1,9 @@
 import React from "react";
 import "./logo.modules.css";
-export const Logo = () => <h1>All Access Pass</h1>;
+import logo from "./logo.png";
+
+export const Logo = () => (
+  <figure>
+    <img src={logo} alt="All Access Pass Logo" />
+  </figure>
+);
