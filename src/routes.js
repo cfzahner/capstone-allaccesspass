@@ -13,6 +13,7 @@ import {
   CompanyForm,
   CompanyList,
   LadiesList,
+  ThankYou,
 } from "./components";
 
 export const Routes = () => (
@@ -49,6 +50,9 @@ export const Routes = () => (
     </Route>
     <Route exact path="/companies">
       <CompanyList />
+    </Route>
+    <Route exact path="/thankyou">
+      <ThankYou />
     </Route>
   </Switch>
 );
