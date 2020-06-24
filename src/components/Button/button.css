@@ -4,14 +4,14 @@ button:not(.plain) {
   padding: 0.375rem 0.75rem;
   transition: background-color 0.15s ease-in-out;
   height: 10vh;
-  width: 40vh;
+  width: 20vh;
   border: none;
 }
 
 .plain {
   background-color: transparent;
   height: 10vh;
-  width: 40vh;
+  width: 20vh;
 }
 
 .primary {
@@ -32,5 +32,5 @@ button:not(.plain) {
 
 .cardButton {
   background-color: orange;
-  display: inline;
+  margin: 1vh;
 }

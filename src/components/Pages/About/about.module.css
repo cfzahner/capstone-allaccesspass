@@ -20,27 +20,32 @@
   text-align: center;
   font-size: 2em;
 }
+
 .message {
-  margin-top: 10vh;
+  margin-top: 20vh;
+  margin: 0;
   text-align: center;
   font-size: 2em;
+  margin-bottom: 10vh;
 }
 
 .companies {
   margin: 0;
-  background-color:orange;
+  background-color: purple;
   padding: 1vh;
   margin-top: 25vh;
   text-align: center;
   color: white;
   font-size: 2em;
+  border-radius: 3em;
 }
 
 .title2 {
   margin-top: 10vh;
-  background-color: orange;
+  background-color: purple;
   padding: 1vh;
   color: white;
   text-align: center;
   font-size: 2em;
+  border-radius: 3em;
 }
