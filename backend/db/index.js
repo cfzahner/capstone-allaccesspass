@@ -3,7 +3,7 @@ import { client } from "./client";
 export const getAllCandidates = async () => {
   try {
     const cursor = await client
-      .db("candidates")
+      .db("all_access_pass")
       .collection("candidates")
       .find();
     const results = await cursor.toArray();
