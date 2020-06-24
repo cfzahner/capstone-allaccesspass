@@ -64,4 +64,21 @@
 .ladiesButtons {
   background-color: navy;
   margin: 2vh;
+  padding: 2em;
+  opacity: 0.8;
+
+}
+
+.ladiesBadBtn {
+  background-color: navy;
+  text-align: center;
+  margin: 2vh;
+  padding: 2em;
+  left: 53vh;
+  width: 9%;
+  height: 15%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  opacity: 0.8;
 }
