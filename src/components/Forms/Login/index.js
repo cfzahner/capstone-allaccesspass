@@ -1,9 +1,7 @@
 import React from "react";
 
 import { Button } from "components/Button";
-import { Form } from "../Form";
-
-import axios from "axios";
+import { Form } from "components/Forms/Form";
 
 import styles from "./Login.module.css";
 
@@ -41,23 +39,6 @@ export class Login extends Form {
     return this.state.inputs.length > 2;
   }
 
-  getAuth = async () => {
-    //async componentDidMount() {
-    try {
-      const auth = await axios("http://localhost:1000/api/auth/auth", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      // this.setState({ loginAuth: [...this.state.loginAuth, auth.data] });
-      console.log(auth.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -70,13 +51,15 @@ export class Login extends Form {
         })
       : JSON.stringify(this.processFormData(e.target));
 
-    const res = await fetch(`http://localhost:1000/api/auth${endpoint}`, {
+    const res = await fetch(`http://localhost:1000/api/employers${endpoint}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: newUserData,
     });
+
+    // TODO{courtney.zahner}: Add some routing to send user to the right page IF res.status === 200
   };
 
   handleButtonToggle = () => {
@@ -92,15 +75,14 @@ export class Login extends Form {
   };
 
   render() {
-    this.getAuth();
     return (
       <form className={styles.form} onSubmit={this.handleSubmit} action="/home">
         {this.renderInputs(this.state.inputs)}
-        <Button buttonText={this.state.buttonTexts[0]} type="submit" />
+        <Button buttonText={this.state.buttonTexts[0]} />
         <Button
           buttonClass="plain"
           buttonText={this.state.buttonTexts[1]}
-          type="submit"
+          type="button"
           onClick={this.handleButtonToggle}
         />
       </form>

@@ -1,11 +1,5 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-import { Header, Main, Home } from "./components";
+import { Home } from "./components";
 
-export const App = () => (
-  <Fragment>
-    <Home />
-  </Fragment>
-);
-// <Header />
-//<Main />;
+export const App = () => <Home />;

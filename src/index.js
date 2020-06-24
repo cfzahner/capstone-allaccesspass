@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
-//import { App } from "./App";
-import { Routes } from "./routes";
+import { Routes } from "./Routes";
 import { Header } from "./components/Header";
 
 import "font-awesome/css/font-awesome.min.css";

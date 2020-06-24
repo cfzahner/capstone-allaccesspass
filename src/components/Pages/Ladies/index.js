@@ -1,6 +1,6 @@
 import React from "react";
 
-export class LadiesList extends React.Component {
+export class Ladies extends React.Component {
   render() {
     return <div>ladies</div>;
   }
