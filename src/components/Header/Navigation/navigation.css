@@ -6,6 +6,8 @@ nav ul {
   background-color: black;
   margin-bottom: 0vh;
   margin-top: 0vh;
+  padding-right: 6vh;
+  padding-left: 6vh;
 }
 
 a {
