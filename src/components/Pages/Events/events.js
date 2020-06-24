@@ -7,12 +7,10 @@ export class Events extends React.Component {
       <div className={styles.topHero}>
         <main>
           <section>
-            <h1 className={styles.eventTitle}>Events</h1>
-
+            div<h1 className={styles.eventTitle}>Events</h1>
             <h2 className={styles.h2Message}>
               Lets talk about webinars, shadowing and education opportunities
             </h2>
-
             <p className={styles.events}>All the Events!</p>
           </section>
         </main>
