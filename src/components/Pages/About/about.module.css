@@ -8,10 +8,19 @@
 }
 
 .title {
-  text-align: center;
-  background-color: transparent;
-  margin-top: 0vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding:1em 3em 1em 3em;
   font-size: 2em;
+  margin-top: 0;
+  position: absolute;
+  top: 35%;
+  bottom: 40%;
+  right: 40%;
+  opacity: 0.5;
+  border-radius: 5em;
 }
 
 .pBody {
