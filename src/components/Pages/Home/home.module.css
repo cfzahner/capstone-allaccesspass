@@ -53,16 +53,15 @@
   }
 
 .homeButtons {
-  left: 130vh;
+  left: 111vh;
   top: 65%;
   width: 75%;
   position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
+  flex-direction: row;
 }
 
 .ladiesButtons {
   background-color: navy;
+  margin: 2vh;
 }
