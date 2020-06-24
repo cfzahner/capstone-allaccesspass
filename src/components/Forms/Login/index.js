@@ -41,23 +41,6 @@ export class Login extends Form {
     return this.state.inputs.length > 2;
   }
 
-  getAuth = async () => {
-    //async componentDidMount() {
-    try {
-      const auth = await axios("http://localhost:1000/api/auth/auth", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      // this.setState({ loginAuth: [...this.state.loginAuth, auth.data] });
-      console.log(auth.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -92,7 +75,6 @@ export class Login extends Form {
   };
 
   render() {
-    this.getAuth();
     return (
       <form className={styles.form} onSubmit={this.handleSubmit} action="/home">
         {this.renderInputs(this.state.inputs)}
