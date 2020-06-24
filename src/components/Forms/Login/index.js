@@ -78,7 +78,7 @@ export class Login extends Form {
     return (
       <form className={styles.form} onSubmit={this.handleSubmit} action="/home">
         {this.renderInputs(this.state.inputs)}
-        <Button buttonText={this.state.buttonTexts[0]} type="submit" />
+        <Button buttonText={this.state.buttonTexts[0]} />
         <Button
           buttonClass="plain"
           buttonText={this.state.buttonTexts[1]}
