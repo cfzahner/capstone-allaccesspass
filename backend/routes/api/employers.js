@@ -12,9 +12,6 @@ router.get("/register", (_, res) => res.send("<p>Testig employers route</p>"));
 router.post("/register", async ({ body }, res) =>
   res.json(await registerEmployer(body))
 );
-router.put("/user/faves/add", async ({ body }, res) => {
-  res.json(await addFave(body.query, body.fave));
-});
 
 router.post("/user/login", async ({ body }, res) => {
   const results = await loginUser(body);
@@ -23,9 +20,6 @@ router.post("/user/login", async ({ body }, res) => {
   }
 
   res.json(results);
-});
-router.put("/user/faves/remove", async ({ body }, res) => {
-  res.json(await removeFave(body.query, body.fave));
 });
 
 export default router;

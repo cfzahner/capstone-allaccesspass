@@ -3,8 +3,6 @@ import React from "react";
 import { Button } from "components/Button";
 import { Form } from "components/Forms/Form";
 
-import axios from "axios";
-
 import styles from "./Login.module.css";
 
 export class Login extends Form {

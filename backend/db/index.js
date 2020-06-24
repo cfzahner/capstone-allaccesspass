@@ -14,56 +14,12 @@ export const getAllCandidates = async () => {
   }
 };
 
-export const getAuth = async () => {
-  try {
-    const cursor = await client.db("candidates").collection("auth").find();
-    const results = await cursor.toArray();
-    await cursor.close();
-    return results;
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
-export const loginUser = async (candidate) => {
-  try {
-    return await client
-      .db("candidates")
-      .collection("candidates")
-      .findOne(candidate);
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
 export const registerEmployer = async (newEmployer) => {
   try {
     return await client
       .db("candidates")
       .collection("candidates")
       .insertOne(newEmployer);
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
-export const addFave = async (usernameQuery, fave) => {
-  try {
-    return await client
-      .db("candidates")
-      .collection("candidates")
-      .findOneAndUpdate(usernameQuery, { $push: { faves: fave } });
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
-export const removeFave = async (usernameQuery, fave) => {
-  try {
-    return await client
-      .db("candidates")
-      .collection("candidates")
-      .findOneAndUpdate(usernameQuery, { $pull: { faves: fave } });
   } catch (err) {
     throw new Error(err);
   }
