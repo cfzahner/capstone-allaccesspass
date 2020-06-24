@@ -55,15 +55,15 @@ export class Home extends React.Component {
           <section className={styles.hero}>
             <section>
               <div className={styles.homeButtons}>
-                <button className={styles.ladiesButtons}>
+                <a href="/profile" className={styles.ladiesButtons}>
                   Add Your Profile
-                </button>
-                <button className={styles.ladiesButtons}>
+                </a>
+                <a href="/ladies" className={styles.ladiesButtons}>
                   Meet the Ladies
-                </button>
-                <button className={styles.ladiesButtons}>
+                </a>
+                <a href="/companies" className={styles.ladiesButtons}>
                   Browse the Companies
-                </button>
+                </a>
               </div>
             </section>
             <div>
