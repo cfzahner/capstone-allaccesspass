@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button } from "components/Button";
-import { Form } from "../Form";
+import { Form } from "components/Forms/Form";
 
 import axios from "axios";
 

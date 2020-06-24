@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { registerEmployer, loginUser, addFave, removeFave } from "../../db";
+import { registerEmployer, loginUser } from "db";
 
 const router = Router();
 
