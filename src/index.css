@@ -1,34 +1,30 @@
 .Header {
+  color: white;
+  font-family: 'Sriracha', cursive;
   margin-top: 5em;
   padding: 20px;
-  font-family: 'Sriracha', cursive;
-  color: white;
 }
 
 .main-login {
-  height: 30vh;
   border: thin solid black;
+  height: 30vh;
   margin-top: 5vh;
   text-align: center;
 }
 
 input {
-  width: 50vw;
-  padding: 20px;
+  font-family: 'Sriracha', cursive;
   margin-bottom: 20px;
   margin-top: 10px;
-  font-family: 'Sriracha', cursive;
-}
-
-input::placeholder {
-  color:;
+  padding: 20px;
+  width: 50vw;
 }
 
 button {
+  background-color: black;
+  opacity: 0.6;
   width: 30vw;
   height: 10vw;
-  background-color: black;
-  opacity: 0.6
 }
 
 .container {
