@@ -9,16 +9,13 @@ router.get("/test", (_, res) => {
 
 router.get("/register", (_, res) => res.send("<p>Testig employers route</p>"));
 
-// TODO: Wrap try-catch
 router.post("/register", async ({ body }, res) =>
   res.json(await registerEmployer(body))
 );
 router.put("/user/faves/add", async ({ body }, res) => {
   res.json(await addFave(body.query, body.fave));
 });
-// TODO: router.put("/saveCandidateId", Use the req.body.candidateId) - update
 
-export default router;
 router.post("/user/login", async ({ body }, res) => {
   const results = await loginUser(body);
   if (!results) {
@@ -30,3 +27,5 @@ router.post("/user/login", async ({ body }, res) => {
 router.put("/user/faves/remove", async ({ body }, res) => {
   res.json(await removeFave(body.query, body.fave));
 });
+
+export default router;
