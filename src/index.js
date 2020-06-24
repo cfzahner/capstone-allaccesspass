@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import { Routes } from "./Routes";
-import { Routes } from "./routes";
 import { Header } from "./components/Header";
 
 import "font-awesome/css/font-awesome.min.css";
