@@ -14,6 +14,17 @@ export const getAllCandidates = async () => {
   }
 };
 
+export const getAuth = async () => {
+  try {
+    const cursor = await client.db("candidates").collection("auth").find();
+    const results = await cursor.toArray();
+    await cursor.close();
+    return results;
+  } catch (err) {
+    throw new Error(err);
+  }
+};
+
 export const loginUser = async (candidate) => {
   try {
     return await client
