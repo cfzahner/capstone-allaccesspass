@@ -1,7 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-//import { Home, Login } from "./components";
 import {
   Home,
   About,
@@ -11,8 +10,7 @@ import {
   ChoicePage,
   WomanForm,
   CompanyForm,
-  CompanyList,
-  LadiesList,
+  Ladies,
 } from "./components";
 
 export const Routes = () => (
@@ -45,10 +43,7 @@ export const Routes = () => (
       <CompanyForm />
     </Route>
     <Route exact path="/ladies">
-      <LadiesList />
-    </Route>
-    <Route exact path="/companies">
-      <CompanyList />
+      <Ladies />
     </Route>
   </Switch>
 );
