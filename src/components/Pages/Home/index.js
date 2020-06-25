@@ -56,13 +56,13 @@ export class Home extends React.Component {
             <section>
               <div className={styles.homeButtons}>
                 <a href="/profile" className={styles.ladiesButtons}>
-                  Add Your Profile
+                  Add Profile
                 </a>
                 <a href="/ladies" className={styles.ladiesButtons}>
-                  Meet the Ladies
+                  Candidates
                 </a>
                 <a href="/companies" className={styles.ladiesButtons}>
-                  Browse the Companies
+                  Companies
                 </a>
               </div>
             </section>
