@@ -11,6 +11,8 @@ import {
   WomanForm,
   CompanyForm,
   Ladies,
+  Companies,
+  ThankYou,
 } from "./components";
 
 export const Routes = () => (
@@ -44,6 +46,12 @@ export const Routes = () => (
     </Route>
     <Route exact path="/ladies">
       <Ladies />
+    </Route>
+    <Route exact path="/companies">
+      <Companies />
+    </Route>
+    <Route exact path="/thankyou">
+      <ThankYou />
     </Route>
   </Switch>
 );
