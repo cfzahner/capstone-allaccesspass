@@ -7,8 +7,8 @@ export class Reviews extends React.Component {
       <main>
         <div className={styles.heroReview}>
           <section>
-            <h1 className={styles.reviewTitle}>Reviews</h1>
-            <h2 className={styles.headerReview}>Lets talk about reviews!</h2>
+            <h2 className={styles.reviewTitle}>Reviews</h2>
+            <h3 className={styles.headerReview}>Lets talk about reviews!</h3>
 
             <p className={styles.reviews}>
               Here, you can leave a review about a good or bad experience you

@@ -24,16 +24,16 @@
 
 .headerReview {
   margin: 0;
-  background-color:purple;
+  background-color: transparent;
   padding: 1vh;
   text-align: center;
-  color: white;
+  color: transparent;
   font-size: 2em;
   border-radius: 3em;
 }
 
 .reviews {
-  margin-top: 40vh;
+  margin-top: 35vh;
   text-align: center;
   font-size: 2em;
 }
