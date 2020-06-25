@@ -1,0 +1,21 @@
+.formTitle {
+  text-align: center;
+  margin-top: 5vh;
+  padding: 1em;
+  background-color: orange;
+  color: white;
+  width: 103vh;
+  margin-left: 23%;
+
+}
+
+.formInput {
+  margin-left: 23%;
+}
+
+.formButton {
+  background-color: aqua;
+  height: 10vh;
+  width: 50vh;
+  margin-left: 19%;
+}
