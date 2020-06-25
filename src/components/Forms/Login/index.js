@@ -39,6 +39,11 @@ export class Login extends Form {
     return this.state.inputs.length > 2;
   }
 
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    window.location.href = "/home";
+  };
+
   handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -58,8 +63,6 @@ export class Login extends Form {
       },
       body: newUserData,
     });
-
-    // TODO{courtney.zahner}: Add some routing to send user to the right page IF res.status === 200
   };
 
   handleButtonToggle = () => {
@@ -76,7 +79,11 @@ export class Login extends Form {
 
   render() {
     return (
-      <form className={styles.form} onSubmit={this.handleSubmit} action="/home">
+      <form
+        className={styles.form}
+        onSubmit={this.handleFormSubmit}
+        action="/home"
+      >
         {this.renderInputs(this.state.inputs)}
         <Button buttonText={this.state.buttonTexts[0]} />
         <Button
