@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./CompanyForm.module.css";
 export class CompanyForm extends React.Component {
   state = {
     companyName: "",
@@ -28,10 +28,10 @@ export class CompanyForm extends React.Component {
   render() {
     return (
       <main>
-        <section>
-          <h2>employer form</h2>
+        <section className={styles.formTitle}>
+          <h2>Employer Form</h2>
         </section>
-        <form onSubmit={this.handleSubmit}>
+        <form className={styles.formInput} onSubmit={this.handleSubmit}>
           <label>
             <input
               type="text"
@@ -81,7 +81,12 @@ export class CompanyForm extends React.Component {
               placeholder="Mission statement"
             />
           </label>
-          <input type="submit" value="Submit" onClick={this.handleFormSubmit} />
+          <input
+            className={styles.formButton}
+            type="submit"
+            value="Submit"
+            onClick={this.handleFormSubmit}
+          />
         </form>
       </main>
     );
