@@ -11,7 +11,7 @@ export class About extends React.Component {
             <h2 className={styles.companies}>Who we work with?</h2>
             <p className={styles.pBody}>
               Here's a list of companies and organizations that we partner with
-              for job placement and furthuring education.
+              for job placement and furthering education.
             </p>
             <h2 className={styles.title2}>Why we are here for you?</h2>
             <p className={styles.message}>
