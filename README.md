@@ -1,6 +1,12 @@
-# React Student Starter
+## All Access Pass
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+All Access Pass is a platform that brings awareness to the gender gap in live entertainment by providing a database of employees and employers. Here women and companies can save and/or match with for further networking and job opportunities.
+
+## Problem and Solution
+Problem: How can I help women get hired in a male dominated industry and encourage networking?
+
+Solution: Provide a database of employees and employers. Here, female candidates and companies can save and/or match with for further networking and job oppurtunites. 
+
 
 ## 'backend' 📁
 
